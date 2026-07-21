@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+h1{
+    text-align: center;
+    color: rgb(37, 99, 235);
+    margin-bottom: 10px;
+}
+
+.welcome{
+    text-align: center;
+    color: rgb(85, 85, 85);
+    margin-bottom: 30px;
+}
+
+.search-section{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.search-section input{
+    width: 320px;
+    padding: 12px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.search-section button{
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: rgb(37, 99, 235);
+    color: white;
+    cursor: pointer;
+}
+
+.search-section button:hover{
+    background-color: blue;
+}
+
+h2{
+    margin-bottom: 25px;
+}
+
+#cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card h3{
+    color: rgb(37, 99, 235);
+    margin-bottom: 15px;
+}
+
+.card p{
+    margin-bottom: 10px;
+    color: rgb(68, 68, 68);
+    line-height: 24px;
+}
+
+
+
+
+@media(max-width: 768px){
+    .search-section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-section input{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .search-section button{
+        width: 150px;
+    }
+}
+
+
+
+
+@media(max-width:480px){
+    h1{
+        font-size: 26px;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    #studentCards{
+        grid-template-columns: 1fr;
+    }
+}
